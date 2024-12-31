@@ -32,7 +32,7 @@ app.use("/api/message", messageRoute);
 
 // code for development
 
-if(process.env.NODE_ENV=="production"){
+if(process.env.NODE_ENV==="production"){
   const dirPath=path.resolve();
   app.use(express.static("./Frontend/dist"));
   app.get('*',(req,res)=>{
